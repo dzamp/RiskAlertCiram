@@ -1,0 +1,505 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-10 "http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#"
+     xml:base="http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10"
+     xmlns:untitled-ontology-10="http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#hasImpact -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-10;hasImpact">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-10;Impact"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-10;Risk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#hasImpactLevel -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-10;hasImpactLevel">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-10;Impact"/>
+        <rdfs:range rdf:resource="&untitled-ontology-10;ImpactLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#hasLikelihoodLevel -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-10;hasLikelihoodLevel">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-10;LikelihoodLevel"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-10;Threat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#hasMagnitudeLevel -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-10;hasMagnitudeLevel">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-10;Level"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-10;Threat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#hasReportType -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-10;hasReportType">
+        <rdfs:domain rdf:resource="&untitled-ontology-10;Report"/>
+        <rdfs:range rdf:resource="&untitled-ontology-10;ReportType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#hasRiskLevel -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-10;hasRiskLevel">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-10;Level"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-10;Risk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#hasThreat -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-10;hasThreat">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-10;Risk"/>
+        <rdfs:range rdf:resource="&untitled-ontology-10;Threat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#hasThreatLevel -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-10;hasThreatLevel">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-10;Level"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-10;Threat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#hasVulnerability -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-10;hasVulnerability">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-10;Risk"/>
+        <rdfs:range rdf:resource="&untitled-ontology-10;Vulnerability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#hasVulnerabilityLevel -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-10;hasVulnerabilityLevel">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-10;Vulnerability"/>
+        <rdfs:range rdf:resource="&untitled-ontology-10;VulnerabilityLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#Alert -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;Alert">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Report"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#Bulletin -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;Bulletin">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Report"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#FraudumentDocumentAlert -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;FraudumentDocumentAlert">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Report"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#Impact -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;Impact"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#ImpactLevel -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;ImpactLevel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#InformationReport -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;InformationReport">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Report"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#InterviewReportDossier -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;InterviewReportDossier">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Report"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#Level -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;Level"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#LikelihoodLevel -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;LikelihoodLevel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#Recommendation -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;Recommendation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#Report -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;Report"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#ReportType -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;ReportType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#Risk -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;Risk"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#RiskAssessment -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;RiskAssessment">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Report"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#TargetMethodologyProfile -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;TargetMethodologyProfile">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Report"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#Threat -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;Threat"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#Vulnerability -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;Vulnerability"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#VulnerabilityLevel -->
+
+    <owl:Class rdf:about="&untitled-ontology-10;VulnerabilityLevel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#ARA -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;ARA">
+        <rdf:type rdf:resource="&untitled-ontology-10;ReportType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#AWO -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;AWO">
+        <rdf:type rdf:resource="&untitled-ontology-10;ReportType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#FRAN_bimonthly -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;FRAN_bimonthly">
+        <rdf:type rdf:resource="&untitled-ontology-10;ReportType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#FRAN_incident -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;FRAN_incident">
+        <rdf:type rdf:resource="&untitled-ontology-10;ReportType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#FRAN_monthly -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;FRAN_monthly">
+        <rdf:type rdf:resource="&untitled-ontology-10;ReportType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#FRAN_quarterly -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;FRAN_quarterly">
+        <rdf:type rdf:resource="&untitled-ontology-10;ReportType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#IR -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;IR">
+        <rdf:type rdf:resource="&untitled-ontology-10;ReportType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#SARA -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;SARA">
+        <rdf:type rdf:resource="&untitled-ontology-10;ReportType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#TFA -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;TFA">
+        <rdf:type rdf:resource="&untitled-ontology-10;ReportType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#TRA -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;TRA">
+        <rdf:type rdf:resource="&untitled-ontology-10;ReportType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#WAB -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;WAB">
+        <rdf:type rdf:resource="&untitled-ontology-10;ReportType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#WAR -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;WAR">
+        <rdf:type rdf:resource="&untitled-ontology-10;ReportType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#action_1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;action_1">
+        <rdf:type rdf:resource="&untitled-ontology-10;Recommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#almost_certain -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;almost_certain">
+        <rdf:type rdf:resource="&untitled-ontology-10;LikelihoodLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#critical_impact -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;critical_impact">
+        <rdf:type rdf:resource="&untitled-ontology-10;ImpactLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#high -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;high">
+        <rdf:type rdf:resource="&untitled-ontology-10;Level"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#high_impact -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;high_impact">
+        <rdf:type rdf:resource="&untitled-ontology-10;ImpactLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#high_vulnerability -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;high_vulnerability">
+        <rdf:type rdf:resource="&untitled-ontology-10;VulnerabilityLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#low -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;low">
+        <rdf:type rdf:resource="&untitled-ontology-10;Level"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#low_impact -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;low_impact">
+        <rdf:type rdf:resource="&untitled-ontology-10;ImpactLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#low_vulnerability -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;low_vulnerability">
+        <rdf:type rdf:resource="&untitled-ontology-10;VulnerabilityLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#medium -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;medium">
+        <rdf:type rdf:resource="&untitled-ontology-10;Level"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#medium_vulnerability -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;medium_vulnerability">
+        <rdf:type rdf:resource="&untitled-ontology-10;VulnerabilityLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#possible -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;possible">
+        <rdf:type rdf:resource="&untitled-ontology-10;LikelihoodLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#report1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;report1">
+        <rdf:type rdf:resource="&untitled-ontology-10;InformationReport"/>
+        <hasReportType rdf:resource="&untitled-ontology-10;ARA"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#unlikely -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;unlikely">
+        <rdf:type rdf:resource="&untitled-ontology-10;LikelihoodLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#very_high_impact -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;very_high_impact">
+        <rdf:type rdf:resource="&untitled-ontology-10;ImpactLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vpap/ontologies/2018/5/untitled-ontology-10#very_high_vulnerability -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-10;very_high_vulnerability">
+        <rdf:type rdf:resource="&untitled-ontology-10;VulnerabilityLevel"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
