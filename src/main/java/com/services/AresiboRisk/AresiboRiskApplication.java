@@ -1,5 +1,7 @@
 package com.services.AresiboRisk;
 
+import com.aresibo.avro.alert.risk.RiskAlert;
+import com.services.AresiboRisk.clients.Producer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -32,6 +34,8 @@ public class AresiboRiskApplication {
 	private static final Logger logger = LogManager.getLogger(AresiboRiskApplication.class);
 	private static int counter = 20000;
 	private static OntModel model;
+	@Autowired
+	public Producer<RiskAlert> producer;
 
 	public static void main(String[] args) {
 		model = ModelFactory.createOntologyModel();

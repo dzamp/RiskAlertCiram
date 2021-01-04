@@ -14,8 +14,16 @@
 	<name>AresiboRisk</name>
 	<description>Ciram Api for Aresibo Risk Analysis</description>
 
+	<repositories>
+		<repository>
+			<id>confluent</id>
+			<url>http://packages.confluent.io/maven/</url>
+		</repository>
+	</repositories>
+
 	<properties>
 		<java.version>11</java.version>
+		<avro.version>1.9.2</avro.version>
 	</properties>
 
 	<dependencies>
@@ -44,6 +52,32 @@
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.confluent</groupId>
+			<artifactId>kafka-avro-serializer</artifactId>  <!-- <3> -->
+			<version>5.3.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>io.confluent</groupId>
+			<artifactId>kafka-json-serializer</artifactId>
+			<version>5.3.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.avro</groupId>
+			<artifactId>avro</artifactId>
+			<version>${avro.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.avro</groupId>
+			<artifactId>avro-compiler</artifactId>
+			<version>${avro.version}</version>
 		</dependency>
 
 		<dependency>
@@ -94,6 +128,33 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.avro</groupId>
+				<artifactId>avro-maven-plugin</artifactId>
+				<version>${avro.version}</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>schema</goal>
+
+						</goals>
+						<configuration>
+							<sourceDirectory>${project.basedir}/src/main/avro/</sourceDirectory>
+							<outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
+							<fieldVisibility>PUBLIC</fieldVisibility>
+							<stringType>String</stringType>
+							<!--                            <imports>${basedir}/src/main/avro/alert/common</imports>-->
+							<includes>
+								<include>**/*.avro</include>
+								<include>**/*.avsc</include>
+							</includes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
 	</build>
 

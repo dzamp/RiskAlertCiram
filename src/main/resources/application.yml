@@ -1,14 +1,16 @@
 server:
-  port: 8080
+  port: 8098
 spring:
   kafka:
     consumer:
-      bootstrap-servers: temple.di.uoa.gr:9092
+      schema-registry: http://195.134.71.202:8081
+      bootstrap-servers: 195.134.71.202:9092
       group-id: pcomp
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
     producer:
+      schema-registry: http://195.134.71.202:8081
       bootstrap-servers: temple.di.uoa.gr:9092
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      key-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
